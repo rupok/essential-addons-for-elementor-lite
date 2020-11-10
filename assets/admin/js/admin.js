@@ -88,7 +88,7 @@
             url: localize.ajaxurl,
             type: "post",
             data: {
-                action: "clear_cache_files_with_ajax",
+                action: "eael_clear_cache",
                 security: localize.nonce,
             },
             beforeSend: function () {

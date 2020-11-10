@@ -10,6 +10,7 @@ if (!defined('ABSPATH')) {
 
 use Essential_Addons_Elementor\Classes\WPML\Eael_WPML;
 use \Essential_Addons_Elementor\Traits\Admin;
+use \Essential_Addons_Elementor\Traits\Cache_Control;
 use \Essential_Addons_Elementor\Traits\Controls;
 use \Essential_Addons_Elementor\Traits\Core;
 use \Essential_Addons_Elementor\Traits\Elements;
@@ -26,6 +27,7 @@ class Bootstrap
     use Core;
     use Helper;
     use Generator;
+    use Cache_Control;
     use Enqueue;
     use Admin;
     use Elements;
@@ -192,13 +194,14 @@ class Bootstrap
             if (!$this->pro_enabled) {
                 $this->admin_notice();
             } else {
-                new WPDeveloper_Core_Installer( basename( EAEL_PLUGIN_BASENAME, '.php' ) );
+                new WPDeveloper_Core_Installer(basename(EAEL_PLUGIN_BASENAME, '.php'));
             }
 
             add_action('admin_menu', array($this, 'admin_menu'));
             add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts'));
-            add_action('wp_ajax_save_settings_with_ajax', array($this, 'save_settings'));
-            add_action('wp_ajax_clear_cache_files_with_ajax', array($this, 'clear_cache_files'));
+
+            add_action('wp_ajax_eael_save_settings', [$this, 'save_settings']);
+            add_action('wp_ajax_eael_clear_cache', [$this, 'clear_cache']);
 
             // Core
             add_filter('plugin_action_links_' . EAEL_PLUGIN_BASENAME, array($this, 'insert_plugin_links'));
