@@ -142,29 +142,6 @@ trait Library
     }
 
     /**
-     * Clear cache files
-     *
-     * @since 3.0.0
-     */
-    public function clear_cache_files()
-    {
-        check_ajax_referer('essential-addons-elementor', 'security');
-
-        if (isset($_REQUEST['posts'])) {
-            if (!empty($_POST['posts'])) {
-                foreach (json_decode($_POST['posts']) as $post) {
-                    $this->remove_files('post-' . $post);
-                }
-            }
-        } else {
-            // clear cache files
-            $this->empty_dir(EAEL_ASSET_PATH);
-        }
-
-        wp_send_json(true);
-    }
-
-    /**
      * Check if wp running in background
      *
      * @since 3.0.0

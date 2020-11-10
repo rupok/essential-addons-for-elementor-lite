@@ -8,26 +8,47 @@ if (!defined('ABSPATH')) {
 
 trait Cache_Control
 {
+    /**
+     * Clear self cache files
+     *
+     * @since 3.0.0
+     */
+    public function clear_cache()
+    {
+        check_ajax_referer('essential-addons-elementor', 'security');
+
+        do_action('eael/before_clear_cache');
+
+        // clear self cache
+        $this->empty_dir(EAEL_ASSET_PATH);
+
+        // clear 3rd party cache
+        $this->clear_3rd_party_cache();
+
+        do_action('eael/after_clear_cache');
+
+        wp_send_json(true);
+    }
+
+    /**
+     * Clear 3rd party cache files
+     *
+     * @since 4.3.6
+     */
     public function clear_3rd_party_cache()
     {
-        global $wp_fastest_cache, $kinsta_cache;
+        global $file_prefix, $wp_fastest_cache, $kinsta_cache;
 
         do_action('eael/before_clear_3rd_party_cache');
 
         // W3 Total Cache
-        if (function_exists('w3tc_pgcache_flush')) {
-            w3tc_pgcache_flush();
+        if (function_exists('w3tc_flush_all')) {
+            w3tc_flush_all();
         }
 
         // WP Super Cache
-        if (function_exists('wp_cache_clean_cache')) {
-            global $file_prefix, $supercachedir;
-
-            if (empty($supercachedir) && function_exists('get_supercache_dir')) {
-                $supercachedir = get_supercache_dir();
-            }
-
-            wp_cache_clean_cache($file_prefix);
+        if (function_exists('wp_cache_clean_cache') && !empty($file_prefix)) {
+            wp_cache_clean_cache($file_prefix, true);
         }
 
         // Wp Fastest Cache
@@ -50,6 +71,11 @@ trait Cache_Control
         // Autoptimize
         if (class_exists('autoptimizeCache')) {
             \autoptimizeCache::clearall();
+        }
+
+        // WP Rocket
+        if (function_exists('rocket_clean_domain')) {
+            rocket_clean_domain();
         }
 
         // LiteSpeed
