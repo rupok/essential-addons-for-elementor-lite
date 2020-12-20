@@ -57,7 +57,7 @@ msgstr ""
 msgid "Select a Fluent Form"
 msgstr ""
 
-#: ../includes/Classes/Helper.php:824, ../includes/Template/Eicon-Woocommerce/default.php:183, ../includes/Template/Eicon-Woocommerce/default.php:129, ../includes/Template/Eicon-Woocommerce/default.php:48, ../includes/Template/Eicon-Woocommerce/default.php:37, ../includes/Template/Eicon-Woocommerce/default.php:21
+#: ../includes/Classes/Helper.php:824, ../includes/Template/Eicon-Woocommerce/default.php:188, ../includes/Template/Eicon-Woocommerce/default.php:135, ../includes/Template/Eicon-Woocommerce/default.php:54, ../includes/Template/Eicon-Woocommerce/default.php:40, ../includes/Template/Eicon-Woocommerce/default.php:21
 msgid "Sale!"
 msgstr ""
 
@@ -7455,11 +7455,11 @@ msgstr ""
 msgid "Layout 2"
 msgstr ""
 
-#: ../includes/Template/Eicon-Woocommerce/default.php:183, ../includes/Template/Eicon-Woocommerce/default.php:129, ../includes/Template/Eicon-Woocommerce/default.php:48, ../includes/Template/Eicon-Woocommerce/default.php:21
+#: ../includes/Template/Eicon-Woocommerce/default.php:298, ../includes/Template/Eicon-Woocommerce/default.php:188, ../includes/Template/Eicon-Woocommerce/default.php:135, ../includes/Template/Eicon-Woocommerce/default.php:54, ../includes/Template/Eicon-Woocommerce/default.php:40, ../includes/Template/Eicon-Woocommerce/default.php:21
 msgid "Stock "
 msgstr ""
 
-#: ../includes/Template/Eicon-Woocommerce/default.php:183, ../includes/Template/Eicon-Woocommerce/default.php:129, ../includes/Template/Eicon-Woocommerce/default.php:48, ../includes/Template/Eicon-Woocommerce/default.php:21
+#: ../includes/Template/Eicon-Woocommerce/default.php:298, ../includes/Template/Eicon-Woocommerce/default.php:188, ../includes/Template/Eicon-Woocommerce/default.php:135, ../includes/Template/Eicon-Woocommerce/default.php:54, ../includes/Template/Eicon-Woocommerce/default.php:40, ../includes/Template/Eicon-Woocommerce/default.php:21
 msgid "Out"
 msgstr ""
 
