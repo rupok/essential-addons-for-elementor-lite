@@ -621,6 +621,7 @@
 }
 .eael-woo-checkout .woocommerce .woo-checkout-payment #payment .payment_methods .payment_box {
   border-radius: 5px;
+  padding: 1rem;
 }
 .eael-woo-checkout .woocommerce .woo-checkout-payment #payment .payment_methods .payment_box p:first-child {
   margin: 0 !important;
@@ -650,4 +651,11 @@
   display: block;
   text-align: right;
   padding-right: 45px;
+}
+.theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment .col-lg-6, .theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment .col-md-6, .theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment .col-sm-12, .theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment .col-xs-12 {
+  width: 100%;
+  float: unset;
+}
+.theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment #payment_heading {
+  display: none;
 }

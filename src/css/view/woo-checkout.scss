@@ -712,7 +712,8 @@ $base-font-size: 14px;
 					}
 
 					.payment_box {
-						border-radius: 5px;
+            border-radius: 5px;
+            padding: 1rem;
 						p:first-child {
 							margin: 0!important;
 						}
@@ -762,4 +763,19 @@ $base-font-size: 14px;
 		}
 	}
 }
+
+// For Theme Masterstudy Custom Style
+
+.theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment .col-lg-6,.theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment .col-md-6,.theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment .col-sm-12,.theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment .col-xs-12
+{
+  width: 100%;
+  float: unset;
+}
+
+.theme-masterstudy .ea-woo-checkout .woocommerce-checkout .woo-checkout-payment #payment_heading
+{
+  display: none;
+}
+
+
 
