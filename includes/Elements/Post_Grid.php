@@ -433,7 +433,7 @@ class Post_Grid extends Widget_Base
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
-                    '{{WRAPPER}} .eael-entry-meta, .eael-entry-meta a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .eael-entry-footer .eael-entry-meta, {{WRAPPER}} .eael-entry-wrapper .eael-entry-meta .eael-meta-posted-on,{{WRAPPER}} .eael-entry-wrapper .eael-entry-meta a' => 'color: {{VALUE}};',
                 ],
             ]
         );
