@@ -511,7 +511,7 @@ class Post_Grid extends Widget_Base
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
-                    '{{WRAPPER}} .eael-entry-footer' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .eael-entry-footer, {{WRAPPER}} .eael-entry-wrapper .eael-entry-meta' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'meta_position' => 'meta-entry-footer',
@@ -527,7 +527,7 @@ class Post_Grid extends Widget_Base
             $this,
             'eael_meta_footer_',
             __('Meta Position', 'essential-addons-for-elementor-lite'),
-            '.eael-grid-post .eael-entry-footer',
+            '.eael-grid-post .eael-entry-footer,.eael-entry-wrapper .eael-entry-meta',
             [
                 'eael_show_meta' => 'yes',
                 'meta_position' => ['meta-entry-footer'],
