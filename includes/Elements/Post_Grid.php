@@ -350,7 +350,7 @@ class Post_Grid extends Widget_Base
                 'name' => 'eael_post_grid_meta_date_background',
                 'label' => __('Background', 'essential-addons-for-elementor-lite'),
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .eael-meta-posted-on',
+                'selector' => '{{WRAPPER}} .eael-post-grid .eael-entry-wrapper>.eael-entry-meta span.eael-posted-on',
             ]
         );
         $this->add_control(
@@ -360,7 +360,7 @@ class Post_Grid extends Widget_Base
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
-                    '{{WRAPPER}} .eael-meta-posted-on' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .eael-post-grid .eael-entry-wrapper>.eael-entry-meta span.eael-posted-on' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -370,7 +370,7 @@ class Post_Grid extends Widget_Base
                 'name' => 'eael_post_grid_meta_date_typography',
                 'label' => __('Typography', 'essential-addons-for-elementor-lite'),
                 'scheme' => Scheme_Typography::TYPOGRAPHY_3,
-                'selector' => '{{WRAPPER}} .eael-meta-posted-on',
+                'selector' => '{{WRAPPER}} .eael-post-grid .eael-entry-wrapper>.eael-entry-meta span.eael-posted-on',
             ]
         );
 
@@ -381,7 +381,7 @@ class Post_Grid extends Widget_Base
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
-                    '{{WRAPPER}} .eael-meta-posted-on' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .eael-post-grid .eael-entry-wrapper>.eael-entry-meta span.eael-posted-on' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -390,7 +390,7 @@ class Post_Grid extends Widget_Base
             [
                 'name' => 'eael_post_grid_meta_date_shadow',
                 'label' => __('Shadow', 'essential-addons-for-elementor-lite'),
-                'selector' => '{{WRAPPER}} .eael-meta-posted-on',
+                'selector' => '{{WRAPPER}} .eael-post-grid .eael-entry-wrapper>.eael-entry-meta span.eael-posted-on',
                 'condition' => [
                     'eael_post_grid_preset_style' => ['three'],
                 ],
