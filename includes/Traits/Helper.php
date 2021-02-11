@@ -388,6 +388,7 @@ trait Helper
     }
 
     public function select2_ajax_posts_filter_autocomplete() {
+        check_ajax_referer('essential-addons-elementor', 'security');
         $post_type = 'post';
         $source_name = 'post_type';
 
@@ -426,6 +427,7 @@ trait Helper
     }
 
     public function select2_ajax_get_posts_value_titles() {
+        check_ajax_referer('essential-addons-elementor', 'security');
         if ( empty( array_filter($_POST[ 'id' ]) ) ) {
             wp_send_json_error( [] );
         }

@@ -24,7 +24,8 @@ class Select2 extends Base_Data_Control
             'eael-select2',
             'eael_select2_localize',
             [
-                'ajaxurl' => admin_url('admin-ajax.php'),
+                'ajaxurl'     => admin_url( 'admin-ajax.php' ),
+                'nonce'       => wp_create_nonce( 'essential-addons-elementor' ),
                 'search_text' => esc_html__('Search', 'essential-addons-for-elementor-lite'),
             ]
         );

@@ -5,8 +5,9 @@
             $(ID).select2({
                 minimumInputLength: 3,
                 ajax: {
-                    url: eael_select2_localize.ajaxurl + "?action=eael_select2_search_post&post_type=" + obj.data.source_type + '&source_name=' + obj.data.source_name,
-                    dataType: 'json'
+                    url: eael_select2_localize.ajaxurl + "?action=eael_select2_search_post&post_type=" + obj.data.source_type + '&source_name=' + obj.data.source_name+ '&security=' + eael_select2_localize.nonce,
+                    dataType: 'json',
+
                 },
                 initSelection: function (element, callback) {
                     if (!obj.multiple) {
@@ -29,7 +30,7 @@
                         $.ajax({
                             method: "POST",
                             url: eael_select2_localize.ajaxurl + "?action=eael_select2_get_title",
-                            data: {post_type: obj.data.source_type, source_name: obj.data.source_name, id: ids}
+                            data: {post_type: obj.data.source_type, source_name: obj.data.source_name, id: ids,security:eael_select2_localize.nonce}
                         }).done(function (response) {
                             if (response.success && typeof response.data.results != 'undefined') {
                                 Object.entries(response.data.results).forEach(entry => {
