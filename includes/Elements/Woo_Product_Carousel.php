@@ -2454,7 +2454,7 @@ class Woo_Product_Carousel extends Widget_Base {
 				    'size' => 100,
 			    ],
 			    'selectors' => [
-				    '{{WRAPPER}} .eael-woo-product-carousel-gallary-pagination img' => 'width: {{SIZE}}{{UNIT}} !important;',
+				    '{{WRAPPER}} .eael-woo-product-carousel-gallary-pagination img' => 'width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important;',
 			    ],
 		    ]
 	    );
