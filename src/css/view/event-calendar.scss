@@ -41,7 +41,7 @@
 	}
 
 	.eaelec-modal {
-		position: fixed;
+		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
@@ -65,6 +65,7 @@
 		&.eael-ec-popup-ready {
 			z-index: 99999;
 			opacity: 1;
+			position: fixed;
 		}
 	}
 

@@ -33,7 +33,7 @@
   float: center !important;
 }
 .eael-event-calendar-wrapper .eaelec-modal {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -64,6 +64,7 @@
 .eael-event-calendar-wrapper .eaelec-modal.eael-ec-popup-ready {
   z-index: 99999;
   opacity: 1;
+  position: fixed;
 }
 .eael-event-calendar-wrapper .eaelec-modal-content {
   position: relative;
