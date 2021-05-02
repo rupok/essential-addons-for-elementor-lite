@@ -748,7 +748,8 @@ class Woo_Product_Carousel extends Widget_Base {
             'default' => 0,
         ] );
 
-	    $taxonomies = get_taxonomies(['object_type' => ['product']], 'objects');
+        $taxonomies = get_object_taxonomies('product', 'objects');
+        
 	    foreach ($taxonomies as $taxonomy => $object) {
 		    if (!isset($object->object_type[0])) {
 			    continue;
@@ -3096,7 +3097,7 @@ class Woo_Product_Carousel extends Widget_Base {
 	    }
 
 
-	    $taxonomies      = get_taxonomies( [ 'object_type' => [ 'product' ] ], 'objects' );
+        $taxonomies = get_object_taxonomies('product', 'objects');
 	    $tax_query_count = isset( $args[ 'meta_query' ] ) ? count( $args[ 'meta_query' ] ) : 0;
 	    foreach ( $taxonomies as $object ) {
 		    $setting_key = $object->name . '_ids';
