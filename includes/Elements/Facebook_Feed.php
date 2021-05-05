@@ -1121,8 +1121,7 @@ class Facebook_Feed extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'eael_facebook_feed_likes_conmments_typography',
-                'scheme' => Typography::TYPOGRAPHY_2,
-                'selector' => '{{WRAPPER}} .eael-facebook-feed-overlay .eael-facebook-feed-item .eael-facebook-feed-item-overlay, {{WRAPPER}} .eael-facebook-feed-card .eael-facebook-feed-item .eael-facebook-feed-item-inner .eael-facebook-feed-item-footer',
+                'selector' => '{{WRAPPER}} .eael-facebook-feed-overlay .eael-facebook-feed-item .eael-facebook-feed-item-overlay, {{WRAPPER}} .eael-facebook-feed-card .eael-facebook-feed-item .eael-facebook-feed-item-inner .eael-facebook-feed-item-footer .clearfix span',
             ]
         );
 
