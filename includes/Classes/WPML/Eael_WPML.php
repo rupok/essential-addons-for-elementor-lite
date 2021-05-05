@@ -61,6 +61,11 @@ trait Eael_WPML
                     'type' => __('Call to Action: Button Text', 'essential-addons-for-elementor-lite'),
                     'editor_type' => 'LINE',
                 ],
+                'eael_cta_btn_link' => [
+	                'field' => 'url',
+	                'type' => __('Call to Action: Button Link', 'essential-addons-for-elementor-lite'),
+	                'editor_type' => 'LINK',
+                ],
             ],
         ];
 
