@@ -401,7 +401,7 @@ class Betterdocs_Search_Form extends Widget_Base
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'result_box_item_typography',
-                    'selector' => '{{WRAPPER}} .betterdocs-live-search .docs-search-result li a'
+                    'selector' => '{{WRAPPER}} .betterdocs-live-search .docs-search-result li .betterdocs-search-title'
                 ]
             );
 
@@ -411,7 +411,7 @@ class Betterdocs_Search_Form extends Widget_Base
                     'label' => esc_html__('Item Color', 'essential-addons-for-elementor-lite'),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .betterdocs-live-search .docs-search-result li a' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .betterdocs-live-search .docs-search-result li .betterdocs-search-title' => 'color: {{VALUE}};',
                     ],
                 ]
             );
@@ -450,7 +450,7 @@ class Betterdocs_Search_Form extends Widget_Base
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'result_box_item_count_typography',
-                    'selector' => '{{WRAPPER}} .betterdocs-live-search .docs-search-result li span'
+                    'selector' => '{{WRAPPER}} .betterdocs-live-search .docs-search-result li .betterdocs-search-category'
                 ]
             );
 
@@ -460,7 +460,7 @@ class Betterdocs_Search_Form extends Widget_Base
                     'label' => esc_html__('Item Color', 'essential-addons-for-elementor-lite'),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .betterdocs-live-search .docs-search-result li span' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .betterdocs-live-search .docs-search-result li .betterdocs-search-category' => 'color: {{VALUE}};',
                     ],
                 ]
             );
