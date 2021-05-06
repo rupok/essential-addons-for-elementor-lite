@@ -52,6 +52,11 @@ trait Eael_WPML
                     'editor_type' => 'LINE',
                 ],
                 [
+                    'field' => 'eael_cta_sub_title',
+                    'type' => __('Call to Action: Sub Title', 'essential-addons-for-elementor-lite'),
+                    'editor_type' => 'LINE',
+                ],
+                [
                     'field' => 'eael_cta_content',
                     'type' => __('Call to Action: Content', 'essential-addons-for-elementor-lite'),
                     'editor_type' => 'AREA',
