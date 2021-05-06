@@ -54,7 +54,7 @@ trait Eael_WPML
                 [
                     'field' => 'eael_cta_content',
                     'type' => __('Call to Action: Content', 'essential-addons-for-elementor-lite'),
-                    'editor_type' => 'VISUAL',
+                    'editor_type' => 'AREA',
                 ],
                 [
                     'field' => 'eael_cta_btn_text',
@@ -63,7 +63,19 @@ trait Eael_WPML
                 ],
                 'eael_cta_btn_link' => [
 	                'field' => 'url',
+	                'field_id' => 'eael_cta_btn_link',
 	                'type' => __('Call to Action: Button Link', 'essential-addons-for-elementor-lite'),
+	                'editor_type' => 'LINK',
+                ],
+                [
+                    'field' => 'eael_cta_secondary_btn_text',
+                    'type' => __('Call to Action: Secondary Button Text', 'essential-addons-for-elementor-lite'),
+                    'editor_type' => 'LINE',
+                ],
+                'eael_cta_secondary_btn_link' => [
+	                'field' => 'url',
+	                'field_id' => 'eael_cta_secondary_btn_link',
+	                'type' => __('Call to Action: Secondary Button Link', 'essential-addons-for-elementor-lite'),
 	                'editor_type' => 'LINK',
                 ],
             ],
