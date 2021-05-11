@@ -241,6 +241,11 @@ trait Enqueue
             // run hook before enqueue scripts
             do_action('eael/before_enqueue_scripts', $elements);
 
+            // enqueue jquery in header for specific widgets
+	        if ( count( array_intersect( ['adv-tabs', 'adv-accordion'], (array) $elements ) ) ) {
+		        wp_enqueue_script( 'jquery' );
+	        }
+
             // js
             if (get_option('eael_js_print_method') == 'internal') {
                 $this->js_strings = $this->generate_strings($elements, 'view', 'js');
