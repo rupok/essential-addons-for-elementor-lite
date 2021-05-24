@@ -1749,9 +1749,7 @@ class Event_Calendar extends Widget_Base
                     <span class="eaelec-event-date-start eaelec-event-popup-date"></span>
                     <span class="eaelec-event-date-end eaelec-event-popup-date"></span>
                 </div>
-                <div class="eaelec-modal-body">
-                    <p></p>
-                </div>
+                <div class="eaelec-modal-body"></div>
                 <div class="eaelec-modal-footer">
                     <a class="eaelec-event-details-link">' . __("Event Details", "essential-addons-for-elementor-lite") . '</a>
                 </div>
