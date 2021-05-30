@@ -418,29 +418,24 @@ class Simple_Menu extends Widget_Base
             ]
         );
 
-        $this->add_control(
-            'eael_simple_menu_item_padding',
-            [
-                'label'      => __('Item Padding', 'essential-addons-for-elementor-lite'),
-                'type'       => Controls_Manager::SLIDER,
-                'size_units' => ['px'],
-                'range'      => [
-                    'px' => [
-                        'min'  => 0,
-                        'max'  => 100,
-                        'step' => 1,
-                    ],
-                ],
-                'default'    => [
-                    'unit' => 'px',
-                    'size' => 20,
-                ],
-                'selectors'  => [
-                    '{{WRAPPER}} .eael-simple-menu li a' => 'padding-left: {{SIZE}}{{UNIT}}; padding-right: {{SIZE}}{{UNIT}};',
-                ],
-
-            ]
-        );
+	    $this->add_responsive_control(
+		    'eael_simple_menu_item_padding',
+		    [
+			    'label'      => __('Item Padding (PX)', 'essential-addons-for-elementor-lite'),
+			    'type'       => Controls_Manager::DIMENSIONS,
+			    'size_units' => ['px'],
+			    'default'    => [
+				    'top' => '0',
+				    'right' => '20',
+				    'bottom' => '0',
+				    'left' => '20',
+				    'isLinked' => false,
+			    ],
+			    'selectors'  => [
+				    '{{WRAPPER}} .eael-simple-menu li a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+			    ],
+		    ]
+	    );
 
         $this->add_control(
             'eael_simple_menu_item_alignment',
@@ -627,6 +622,19 @@ class Simple_Menu extends Widget_Base
 		    ]
 	    );
 
+	    $this->add_control(
+		    'eael_simple_menu_item_indicator_color',
+		    [
+			    'label'     => __('Icon Color', 'essential-addons-for-elementor-lite'),
+			    'type'      => Controls_Manager::COLOR,
+//                'default' => '#ffffff',
+			    'selectors' => [
+				    '{{WRAPPER}} .eael-simple-menu li a span, {{WRAPPER}} .eael-simple-menu li span.eael-simple-menu-indicator' => 'color: {{VALUE}}',
+				    '{{WRAPPER}} .eael-simple-menu li span.eael-simple-menu-indicator svg, {{WRAPPER}} .indicator-svg svg' => 'fill: {{VALUE}}',
+			    ],
+		    ]
+	    );
+
         $this->add_control(
             'eael_simple_menu_item_indicator_note',
             [
@@ -634,6 +642,7 @@ class Simple_Menu extends Widget_Base
                 'show_label' => false,
                 'type'       => Controls_Manager::RAW_HTML,
                 'raw'        => __('<div style="font-size: 11px;font-style:italic;line-height:1.4;color:#a4afb7;">Following options are only available in the <span style="color:#d30c5c"><strong>Small</strong></span> screens for <span style="color:#d30c5c"><strong>Horizontal</strong></span> Layout, and all screens for <span style="color:#d30c5c"><strong>Vertical</strong></span> Layout</div>', 'essential-addons-for-elementor-lite'),
+	            'separator' => 'before',
             ]
         );
 
@@ -719,6 +728,19 @@ class Simple_Menu extends Widget_Base
                 'separator' => 'before',
             ]
         );
+
+	    $this->add_control(
+		    'eael_simple_menu_item_indicator_hover_color',
+		    [
+			    'label'     => __('Icon Color', 'essential-addons-for-elementor-lite'),
+			    'type'      => Controls_Manager::COLOR,
+//                'default' => '#ffffff',
+			    'selectors' => [
+				    '{{WRAPPER}} .eael-simple-menu li:hover a span, {{WRAPPER}} .eael-simple-menu li:hover span.eael-simple-menu-indicator' => 'color: {{VALUE}}',
+				    '{{WRAPPER}} .eael-simple-menu li:hover span.eael-simple-menu-indicator svg' => 'fill: {{VALUE}}',
+			    ],
+		    ]
+	    );
 
         $this->add_control(
             'eael_simple_menu_item_hover_indicator_note',
@@ -936,6 +958,19 @@ class Simple_Menu extends Widget_Base
 		    ]
 	    );
 
+	    $this->add_control(
+		    'eael_simple_menu_item_indicator_color',
+		    [
+			    'label'     => __('Icon Color', 'essential-addons-for-elementor-lite'),
+			    'type'      => Controls_Manager::COLOR,
+//                'default' => '#ffffff',
+			    'selectors' => [
+				    '{{WRAPPER}} .eael-simple-menu li ul li a span, {{WRAPPER}} .eael-simple-menu li ul li span.eael-simple-menu-indicator' => 'color: {{VALUE}}',
+				    '{{WRAPPER}} .eael-simple-menu li ul li .eael-simple-menu-indicator svg, {{WRAPPER}} .eael-simple-menu li ul li a .indicator-svg svg' => 'fill: {{VALUE}}',
+			    ],
+		    ]
+	    );
+
         $this->add_control(
             'eael_simple_menu_dropdown_item_indicator_note',
             [
@@ -943,6 +978,7 @@ class Simple_Menu extends Widget_Base
                 'show_label' => false,
                 'type'       => Controls_Manager::RAW_HTML,
                 'raw'        => __('<div style="font-size: 11px;font-style:italic;line-height:1.4;color:#a4afb7;">Following options are only available in the <span style="color:#d30c5c"><strong>Small</strong></span> screens for <span style="color:#d30c5c"><strong>Horizontal</strong></span> Layout, and all screens for <span style="color:#d30c5c"><strong>Vertical</strong></span> Layout</div>', 'essential-addons-for-elementor-lite'),
+	            'separator' => 'before',
             ]
         );
 
@@ -1027,6 +1063,19 @@ class Simple_Menu extends Widget_Base
                 'separator' => 'before',
             ]
         );
+
+	    $this->add_control(
+		    'eael_simple_menu_dropdown_item_hover_indicator_color',
+		    [
+			    'label'     => __('Icon Color', 'essential-addons-for-elementor-lite'),
+			    'type'      => Controls_Manager::COLOR,
+//                'default' => '#ffffff',
+			    'selectors' => [
+				    '{{WRAPPER}} .eael-simple-menu li ul li:hover a span, {{WRAPPER}} .eael-simple-menu li ul li:hover span.eael-simple-menu-indicator' => 'color: {{VALUE}}',
+				    '{{WRAPPER}} .eael-simple-menu li ul li:hover .eael-simple-menu-indicator svg, {{WRAPPER}} .eael-simple-menu li ul li:hover a .indicator-svg svg' => 'fill: {{VALUE}}',
+			    ],
+		    ]
+	    );
 
         $this->add_control(
             'eael_simple_menu_dropdown_item_hover_indicator_note',
