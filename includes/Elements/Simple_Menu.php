@@ -954,12 +954,13 @@ class Simple_Menu extends Widget_Base
 			    'selectors' => [
 				    '{{WRAPPER}} .eael-simple-menu li ul li a span, {{WRAPPER}} .eael-simple-menu li ul li span.eael-simple-menu-indicator' => 'font-size: {{SIZE}}{{UNIT}};',
 				    '{{WRAPPER}} .eael-simple-menu li ul li .eael-simple-menu-indicator svg, {{WRAPPER}} .eael-simple-menu li ul li a .indicator-svg svg'	=> 'width: {{SIZE}}{{UNIT}};',
+				    '{{WRAPPER}} .eael-simple-menu li ul li a .dropdown-indicator-svg svg'	=> 'width: {{SIZE}}{{UNIT}};',
 			    ],
 		    ]
 	    );
 
 	    $this->add_control(
-		    'eael_simple_menu_item_indicator_color',
+		    'eael_simple_menu_dropdown_item_indicator_color',
 		    [
 			    'label'     => __('Icon Color', 'essential-addons-for-elementor-lite'),
 			    'type'      => Controls_Manager::COLOR,
@@ -967,6 +968,7 @@ class Simple_Menu extends Widget_Base
 			    'selectors' => [
 				    '{{WRAPPER}} .eael-simple-menu li ul li a span, {{WRAPPER}} .eael-simple-menu li ul li span.eael-simple-menu-indicator' => 'color: {{VALUE}}',
 				    '{{WRAPPER}} .eael-simple-menu li ul li .eael-simple-menu-indicator svg, {{WRAPPER}} .eael-simple-menu li ul li a .indicator-svg svg' => 'fill: {{VALUE}}',
+				    '{{WRAPPER}} .eael-simple-menu li ul li a .dropdown-indicator-svg svg' => 'fill: {{VALUE}}',
 			    ],
 		    ]
 	    );
