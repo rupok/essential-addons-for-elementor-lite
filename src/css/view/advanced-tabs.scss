@@ -42,17 +42,14 @@
     display: none;
 }
 .eael-advance-tabs .eael-tabs-nav > ul li:hover,
-.eael-advance-tabs .eael-tabs-nav > ul li.active,
-.eael-advance-tabs .eael-tabs-nav > ul li.active-default {
+.eael-advance-tabs .eael-tabs-nav > ul li.active {
     background-color: #444;
 }
-.eael-advance-tabs.active-caret-on .eael-tabs-nav > ul li.active:after,
-.eael-advance-tabs.active-caret-on .eael-tabs-nav > ul li.active-default:after {
+.eael-advance-tabs.active-caret-on .eael-tabs-nav > ul li.active:after {
     display: none;
 }
 
-.eael-advance-tabs .eael-tabs-nav > ul li.active:after,
-.eael-advance-tabs .eael-tabs-nav > ul li.active-default:after {
+.eael-advance-tabs .eael-tabs-nav > ul li.active:after {
     display: block;
 }
 
@@ -67,8 +64,7 @@
     opacity: 0;
 }
 
-.eael-advance-tabs .eael-tabs-content > div.active,
-.eael-advance-tabs .eael-tabs-content > div.active-default {
+.eael-advance-tabs .eael-tabs-content > div.active {
     display: block;
     width: 100%;
     padding: 1em;
@@ -77,7 +73,6 @@
 }
 
 /*--- Inline Icon ---*/
-
 .eael-tab-inline-icon li a .fa {
     margin-right: 10px;
     line-height: 1;
@@ -106,7 +101,6 @@
 }
 
 /*--- Vertical Tabs ---*/
-
 .eael-advance-tabs.eael-tabs-vertical {
     display: flex;
 }
