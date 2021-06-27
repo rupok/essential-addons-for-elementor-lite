@@ -9,10 +9,10 @@ var EventCalendar = function ($scope, $) {
     locale = element.data("locale"),
     translate = element.data("translate"),
     defaultView = element.data("defaultview"),
-    time_format = element.data("time_format") == "yes" ? true : false,
-    calendarEl = document.getElementById("eael-event-calendar-" + calendarID);
+    time_format = element.data("time_format") == "yes" ? true : false;
 
-  var calendar = new Calendar(calendarEl, {
+  var calendar = new Calendar(
+      $scope[0].querySelector(".eael-event-calendar-cls"), {
     plugins: ["dayGrid", "timeGrid", "list"],
     editable: false,
     selectable: false,
@@ -200,7 +200,7 @@ var EventCalendar = function ($scope, $) {
     },
   });
 
-  CloseButton.on("click", function () {
+  CloseButton.on("click", function (event) {
     event.stopPropagation();
     ecModal
       .addClass("eael-ec-modal-removing")
@@ -217,6 +217,10 @@ var EventCalendar = function ($scope, $) {
   });
 
   calendar.render();
+
+  ea.hooks.addAction("eventCalendar.reinit", "ea", () => {
+      calendar.today();
+  });
 };
 
 jQuery(window).on("elementor/frontend/init", function () {
