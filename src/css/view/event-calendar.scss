@@ -318,6 +318,13 @@ span.fc-day-number {
 					}
 				}
 			}
+
+			td.fc-widget-content {
+				> div[style*="scroll"] {
+					height: auto !important;
+					overflow: hidden !important;
+				}
+			}
 		}
 	}
 }

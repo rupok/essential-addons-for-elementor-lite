@@ -279,6 +279,10 @@ span.fc-day-number {
 .eael-event-calendar-wrapper .fc-view .fc-body thead:first-child tr:first-child td {
   border-bottom: 3px solid transparent;
 }
+.eael-event-calendar-wrapper .fc-view .fc-body td.fc-widget-content > div[style*=scroll] {
+  height: auto !important;
+  overflow: hidden !important;
+}
 .eael-event-calendar-wrapper .fc-view table thead:first-child tr:first-child td {
   border-top: 1px solid #dfdfe9;
 }
