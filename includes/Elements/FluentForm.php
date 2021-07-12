@@ -1580,18 +1580,11 @@ class FluentForm extends Widget_Base
         $this->add_responsive_control(
             'button_margin',
             [
-                'label' => __('Margin Top', 'essential-addons-for-elementor-lite'),
-                'type' => Controls_Manager::SLIDER,
-                'range' => [
-                    'px' => [
-                        'min' => 0,
-                        'max' => 100,
-                        'step' => 1,
-                    ],
-                ],
+                'label' => __('Margin', 'essential-addons-for-elementor-lite'),
+                'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .eael-contact-form.eael-fluent-form-wrapper .ff-el-group .ff-btn-submit' => 'margin-top: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}} .eael-contact-form.eael-fluent-form-wrapper .ff-el-group .ff-btn-submit' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
                 ],
             ]
         );
@@ -2207,7 +2200,7 @@ class FluentForm extends Widget_Base
         else {
             $this->add_render_attribute( 'eael_fluentform_wrapper', 'class', 'eael-contact-form-align-default' );
         }
-        
+
         $shortcode = '[fluentform id="'.$this->get_settings_for_display('form_list').'"]';
 
         ?>
